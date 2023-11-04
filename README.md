@@ -8,3 +8,7 @@ This game also known as "Color Lines" or
 [glines](https://linux.die.net/man/6/glines) in
 the GNOME distribution in the early 2000s. Based
 on [this internet history website](https://www.goodolddays.net/game/id%2C1176/Color-Lines.html), it was originally designed by Olga Demina in 1992.
+
+[Try it online!](https://eliben.github.io/colorful-lines/)! Here's a screenshot:
+
+![Screenshot](/doc/colorful-lines-screenshot.png)
