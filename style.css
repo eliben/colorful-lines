@@ -1,0 +1,27 @@
+canvas {
+  border: solid 1px; 
+}
+
+#restartbutton {
+  color: #039;
+  font: bold 84% "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  background-color:#fed;
+  border:1px solid;
+  border-color: #696 #363 #363 #696;
+}
+
+hr {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 8px auto;
+	height: 0;
+	max-height: 0;
+	width: 60%;
+	clear: both;
+	border: none;
+	border-top: 1px solid #AAA;
+	border-bottom: 1px solid #FFF;
+	font-size: 1px;
+	line-height: 0;
+}
