@@ -18,10 +18,10 @@ var Game = {
     preview_colors: [],
 
     State: {
-        IDLE:       0,
-        SELECTED:   1,
-        BUSY:       2,
-        GAMEOVER:   3
+        IDLE: 0,
+        SELECTED: 1,
+        BUSY: 2,
+        GAMEOVER: 3
     },
 
     // The board. A 2D array, each holding either a color name
@@ -30,28 +30,28 @@ var Game = {
     board: [],
 
     Geometry: {
-        MAX_COLS:       9,
-        MAX_ROWS:       9,
+        MAX_COLS: 9,
+        MAX_ROWS: 9,
 
         // Each tile has a ball inside it. The bounding box of the
         // ball is drawn with margin BALL_MARGIN taken from each
         // bounding side, i.e. the ball diameter is:
         // TILE_WIDTH - 2*BALL_MARGIN
         //
-        TILE_WIDTH:     30,
-        BALL_MARGIN:    3,
-        BALL_RADIUS:    null,   // computed dynamically
+        TILE_WIDTH: 30,
+        BALL_MARGIN: 3,
+        BALL_RADIUS: null,   // computed dynamically
 
-        BOARD_TOPLEFT:  [10, 10],
+        BOARD_TOPLEFT: [10, 10],
 
         // these will be computed dynamically
-        BOARD_WIDTH:    null,
-        BOARD_HEIGHT:   null,
+        BOARD_WIDTH: null,
+        BOARD_HEIGHT: null,
 
-        CANVAS_WIDTH:   500,
-        CANVAS_HEIGHT:  300,
+        CANVAS_WIDTH: 500,
+        CANVAS_HEIGHT: 300,
 
-        PREVIEW_TOPLEFT:    [380, 25],
+        PREVIEW_TOPLEFT: [380, 25],
         PREVIEW_TILE_WIDTH: 20,
         PREVIEW_BALL_RADIUS: null,  // computed dynamically
     },
@@ -356,7 +356,7 @@ function move_ball_step(path, i) {
 
     let ball_color = Game.board[path[i].row][path[i].col];
     Game.board[path[i].row][path[i].col] = null;
-    Game.board[path[i+1].row][path[i+1].col] = ball_color;
+    Game.board[path[i + 1].row][path[i + 1].col] = ball_color;
     do_draw();
 
     setTimeout(move_ball_step, 30, path, i + 1);
@@ -466,8 +466,8 @@ function check_lines() {
         }
 
         setTimeout(function () {
-                Game.state = Game.State.IDLE;
-            }, 200 + ball_count * 50);
+            Game.state = Game.State.IDLE;
+        }, 200 + ball_count * 50);
 
         Game.score += ball_count;
 
@@ -487,9 +487,9 @@ function ball_flash_out(coord) {
     Game.board[coord.row][coord.col] = 'white';
     do_draw();
     setTimeout(function () {
-            Game.board[coord.row][coord.col] = null;
-            do_draw();
-        }, 100);
+        Game.board[coord.row][coord.col] = null;
+        do_draw();
+    }, 100);
 }
 
 
@@ -549,8 +549,8 @@ function xy2coord(x, y) {
         return null;
     }
 
-    return new Coord(   Math.floor(dy / Game.Geometry.TILE_WIDTH),
-                        Math.floor(dx / Game.Geometry.TILE_WIDTH));
+    return new Coord(Math.floor(dy / Game.Geometry.TILE_WIDTH),
+        Math.floor(dx / Game.Geometry.TILE_WIDTH));
 }
 
 

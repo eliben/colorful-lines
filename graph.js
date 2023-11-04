@@ -16,8 +16,8 @@ function Graph(vertices, successors_func) {
         var vertex = vertices[i];
 
         var entry = {
-            d:      100000,
-            pred:   null
+            d: 100000,
+            pred: null
         };
 
         this.graph[vertex] = entry;
@@ -27,7 +27,7 @@ function Graph(vertices, successors_func) {
     this.clear = function () {
         for (var i = 0; i < this.graph.length; ++i) {
             if (this.graph[i] !== undefined) {
-                this.graph[i] = {d: 100000, pred: null};
+                this.graph[i] = { d: 100000, pred: null };
             }
         }
     }
