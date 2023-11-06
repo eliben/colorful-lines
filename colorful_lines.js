@@ -158,7 +158,7 @@ function get_all_balls(board) {
 
 
 function is_canvas_supported() {
-    canvas = document.getElementById('canvas');
+    let canvas = document.getElementById('canvas');
     if (canvas.getContext) {
         return true;
     }
